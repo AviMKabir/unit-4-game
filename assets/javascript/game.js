@@ -8,6 +8,9 @@ var crystal1Value = Math.floor(Math.random() * 11) + 1;
 var crystal2Value = Math.floor(Math.random() * 11) + 1;
 var crystal3Value = Math.floor(Math.random() * 11) + 1;
 var crystal4Value = Math.floor(Math.random() * 11) + 1;
+var wins = 0;
+var losses = 0;
+
 
 console.log(targetNumber);
 
@@ -17,6 +20,22 @@ console.log(" crystal 1 value: " + crystal1Value);
 console.log(" crystal 2 value: " + crystal2Value);
 console.log(" crystal 3 value: " + crystal3Value);
 console.log(" crystal 4 value: " + crystal4Value);
+
+function reset() {
+
+     playerNumber = 0;
+ targetNumber = Math.floor(Math.random() * 101) + 19;
+ crystal1Value = Math.floor(Math.random() * 11) + 1;
+ crystal2Value = Math.floor(Math.random() * 11) + 1;
+ crystal3Value = Math.floor(Math.random() * 11) + 1;
+crystal4Value = Math.floor(Math.random() * 11) + 1;
+$(".targetNumberDiv").html(targetNumber);
+    $(".playerNumberDiv").html(playerNumber);
+
+
+
+
+};
 
 
 $(document).ready(function () {
@@ -42,12 +61,21 @@ $(document).ready(function () {
        if (playerNumber === targetNumber) {
 
         alert("You win!");
+        wins++;
+        $(".winCounter").html("wins: " + wins);
+        reset();
+
     
     }
     
     if (playerNumber > targetNumber) {
     
         alert("You lose!");
+        losses++;
+        $(".lossCounter").html("losses: " + losses);
+        
+        reset();
+
     
     }
     
@@ -67,12 +95,21 @@ $(document).ready(function () {
         if (playerNumber === targetNumber) {
  
          alert("You win!");
+         wins++;
      
+         $(".winCounter").html("wins: " + wins);
+         reset();
+
      }
      
      if (playerNumber > targetNumber) {
      
          alert("You lose!");
+         losses++;
+         
+         $(".lossCounter").html("losses: " + losses);
+         reset();
+
      
      }
 
@@ -95,13 +132,20 @@ $(document).ready(function () {
         if (playerNumber === targetNumber) {
  
          alert("You win!");
+         wins++;
+         $(".winCounter").html("wins: " + wins);
+         reset();
+
      
      }
      
      if (playerNumber > targetNumber) {
      
          alert("You lose!");
-     
+         losses++;
+         $(".lossCounter").html("losses: " + losses);
+         reset();
+
      }
 
      
@@ -124,12 +168,21 @@ $(document).ready(function () {
         if (playerNumber === targetNumber) {
  
          alert("You win!");
+         wins++;
+         $(".winCounter").html("wins: " + wins);
+         reset();
+
      
      }
      
      if (playerNumber > targetNumber) {
      
          alert("You lose!");
+         losses++;
+
+         $(".lossCounter").html("losses: " + losses);
+         reset();
+
      
      }
 

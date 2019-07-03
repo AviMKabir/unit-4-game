@@ -1,44 +1,159 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Crystal Game</title>
-
     <link rel="stylesheet" href="assets/css/reset.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="assets/css/style.css">
-    
-   
-    
 
-   
 </head>
+
 <body>
+
+    <div class="container">
+
+        <!-- instructions -->
+
+        <div class="jumbotron jumbotron-fluid">
+            <div class="container">
+
+                <h1 class="text-center">Crystal Collector</h1>
+
+            </div>
+        </div>
+
+        <div class="card" >
+            <div class="card-header">
+                Instructions
+            </div>
+
+            <div class="container">
+
+                <br>
+
+            <p>You will be given a random target number at the start of the game. </p>
+
+            <p>There are 4 crystals below, each adding a pecific amount to your score.
+                You win the game by matching your score to the target number.</p>
+
+            <p>The crystal amounts will change at the beginning of every game</p>
+
+            </div>
+
+            
+        </div>
+
+
+
+<br>
+
+
+<div class="row">
+        <div class="col">
+                <div class="card" >
+                        <div class="card-header">
+                         Win Counter 
+                        </div>
+                        <ul class="list-group list-group-flush">
+                          
+                          <li class="list-group-item">   <div class="winCounter">wins: 0</div>  </li>
+                          <li class="list-group-item">      <div class="lossCounter">losses: 0</div>  </li>
+                        </ul>
+                      </div>
+        </div>
+        <div class="col">
+                <div class="card" >
+                        <div class="card-header">
+                         Target Number
+                        </div>
+                        <ul class="list-group list-group-flush">
+                          <li class="list-group-item">  <div class="targetNumberDiv">random number here</div> </li>
+                        
+                        </ul>
+                      </div>
+        </div>
+        <div class="col">
+                <div class="card" >
+                        <div class="card-header">
+                         Your Number
+                        </div>
+                        <ul class="list-group list-group-flush">
+                          <li class="list-group-item">   <div class="playerNumberDiv">your number here</div> </li>
+                        
+                        </ul>
+                      </div>
+        </div>
+      </div>
     
-<h1>Crystal Collector</h1>
-
-<p>yadda yaddas insctructions blah blah</p>
-
-<div class="targetNumberDiv">random number here</div>
-
-<div class="winCounter">wins/losses here</div>
-
-<button id="crystal1">act like this is crystal 1</button>
-
-<button id="crystal2">act like this is crystal 2</button>
-
-<button id="crystal3">act like this is crystal 3</button>
-
-<button id="crystal4">act like this is crystal 4</button>
-
-<div class="playerNumberDiv">your number here</div>
 
 
-<!-- linking jquery -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 
-<script src="assets/javascript/game.js"></script>
 
+<!-- wins losses -->
+
+
+
+
+<!-- game stuff -->
+
+
+
+
+      
+   
+
+
+
+
+
+
+
+
+
+          <!-- crystals will have their own row but the game stuff will be in 3 columns -->
+    
+          <div class="card" >
+                <div class="card-header">
+                 Crystals
+                </div>
+                <ul class="list-group list-group-flush">
+                  <li class="list-group-item">   <button id="crystal1">act like this is crystal 1</button>
+
+                    <button id="crystal2">act like this is crystal 2</button>
+            
+                    <button id="crystal3">act like this is crystal 3</button>
+            
+                    <button id="crystal4">act like this is crystal 4</button>
+             </li>
+                
+                </ul>
+              </div>
+     
+
+       
+            </div>
+
+
+
+
+    </div>
+
+
+
+
+
+
+
+    <!-- linking jquery -->
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <script src="assets/javascript/game.js"></script>
 </body>
+
 </html>
